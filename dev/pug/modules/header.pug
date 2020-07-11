@@ -1,0 +1,21 @@
+header.header
+  .header__wrap.container
+    .header__col
+      a.header__logo(href="index.html")
+        img.header__logo-img(src="./assets/images/logo.png" alt='лого')
+        span.header__logo-text Учебный 
+          span.line_break центр
+      .header__contacts
+        svg.header__icon
+          use(xlink:href="./assets/images/svg/symbol/sprite.svg#phone")
+        .header__contacts-text Телефон: 
+          a.header__contacts-phone(href="tel:+7495 104-57-77") +7 (495) 104-57-77
+        button.header__contacts-button.button Вам перезвонить?
+    .header__col
+      a(href="#").header__login Вход в Личный Кабинет
+        svg.header__login-icon.header__icon
+          use(xlink:href="./assets/images/svg/symbol/sprite.svg#id-card")
+      .burger-button
+        .burger-button__piece.half.start
+        .burger-button__piece
+        .burger-button__piece.half.end
