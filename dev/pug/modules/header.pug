@@ -1,3 +1,6 @@
+mixin menuItem(href, text)
+  a.header__menu-item(href=href)= text
+
 header.header
   .header__wrap.container
     .header__col
@@ -20,3 +23,20 @@ header.header
         .burger-button__piece.half.start
         .burger-button__piece
         .burger-button__piece.half.end
+  .header__menu
+    .header__wrap.container
+      .header__col
+        nav.header__menu-list
+          +menuItem('#', 'Учебный центр')
+          +menuItem('#', 'Охрана труда')
+          +menuItem('#', 'Промышленная безопасность')
+          +menuItem('#', 'Пожарная безопасность')
+          +menuItem('#', 'Экологическая безопасность')
+      .header__col
+        nav.header__menu-list
+          +menuItem('#', 'О компании')
+          +menuItem('#', 'Новости')
+          +menuItem('#', 'Контакты')
+          button(type="submit").header__menu-search
+            svg
+              use(xlink:href="./assets/images/svg/symbol/sprite.svg#search")

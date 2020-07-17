@@ -8,9 +8,11 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "slick-slider": "^1.8.2"
+  },
   "devDependencies": {
-    "browser-sync": "^2.26.7",
+    "browser-sync": "^2.26.10",
     "gulp": "github:gulpjs/gulp",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-cheerio": "^1.0.0",

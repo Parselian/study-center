@@ -2,7 +2,7 @@
   .button
     font-size: 0.9vw
   .header
-    font-size: 0.83vw
+    font-size: 0.73vw
     &__logo
       font-size: 1vw
       &-img
@@ -16,12 +16,19 @@
         width: 1.6vw
         height: 1.6vw
         left: -2vw
+  .slider
+    &__slide
+      &-text
+        font-size: 1.1vw
+        max-width: 38vw
+        line-height: 1.3vw
+      &-button
+        font-size: 1.2vw
 
 @media (max-width: 1300px)
   .button
     font-size: 1vw
   .header
-    font-size: 0.93vw
     &__logo
       font-size: 1.1vw
       &-img
@@ -35,6 +42,10 @@
         width: 1.7vw
         height: 1.7vw
         left: -2.1vw
+    &__menu
+      &-item
+        &:after
+          bottom: -1.5vw
   
 @media (max-width: 1100px)
   .button
@@ -54,18 +65,29 @@
         width: 1.9vw
         height: 1.9vw
         left: -2.3vw
+    &__menu
+      font-size: 0.73vw
+      &-item
+        &:after
+          bottom: -1.65vw
 
 @media (max-width: 992px)
-  .container
+  .slick
+    &-next
+      right: 40px
+    &-prev
+      left: 40px
+  .header__wrap
     padding: 0 15px
+  .container
     max-width: 720px
   .button
-    font-size: 14px
+    font-size: 12px
   .burger
     &-button
       display: flex
   .header
-    font-size: 14px
+    font-size: 12px
     &__logo
       margin-right: 60px
       font-size: 16px
@@ -82,18 +104,72 @@
         padding: 5px 18px 5px 24px
     &__login
       display: none
+    &__menu
+      display: none
+  .slider
+    &__slide
+      &-content
+        padding:
+          top: 65px
+          left: 30px
+          bottom: 80px
+      &-title
+        margin-bottom: 30px
+        font-size: 22px
+        line-height: 26px
+      &-text
+        margin-bottom: 50px
+        max-width: 340px
+        font-size: 14px
+        line-height: 18px
+      &-button
+        padding: 15px 30px
+      &-img
+        height: 240px
+        top: 10%
 
 @media (max-width: 768px)
   .header
     &__contacts
       &-label
         display: none
+      &-button
+        display: none
+  .slider
+    &__slide
+      &-content
+        padding:
+          top: 40px
+          left: 10px
+      &-title
+        font-size: 26px
+        line-height: 32px
+      &-button
+        font-size: 14px
+      &-img
+        display: none !important
 
 @media (max-width: 576px)
+  .container
+    max-width: 100%
+    width: 90%
   .header
     &__contacts
       &-button
         display: none
+  .slider
+      
+    &__slide
+      // text-align: center
+      &-content
+        display: flex
+        // justify-content: center
+      &-title
+        font-size: 5.3vw
+        line-height: 7.3vw
+      &-text
+        width: 80%
+        font-size: 14px
   
 @media (max-width: 460px)
   .header
@@ -101,3 +177,7 @@
       margin-right: 50px
       &-text
         display: none
+  .slider
+    &__slide
+      &-text
+        font-size: 12px
