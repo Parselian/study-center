@@ -9,7 +9,7 @@ module.exports = () => {
       .pipe($.gp.cheerio({
         run: ($) => {
           $('[fill]').removeAttr('fill');
-          $('[style]').removeAttr('style');
+          // $('[style]').removeAttr('style');
           $('[stroke]').removeAttr('stroke');
         },
         parserOptions: { xmlMode: true }
