@@ -148,6 +148,19 @@
       &-img
         height: 240px
         top: 10%
+  .breadcrumbs
+    &__link
+      margin-right: 40px
+      &-text
+        margin-right: 10px
+        font-size: 12px
+      &-icon
+        width: 20px
+        height: 20px
+      &-arrow
+        width: 12px
+        height: 12px
+        right: -25px
 
 @media (max-width: 768px)
   .container
@@ -182,6 +195,14 @@
         font-size: 14px
       &-img
         display: none !important
+  .breadcrumbs
+    &__link
+      display: flex
+      align-items: center
+      line-height: 14px
+      &-icon
+        width: 30px
+        height: 30px
 
 @media (max-width: 576px)
   .container
@@ -210,6 +231,16 @@
       &-text
         width: 80%
         font-size: 14px
+  .breadcrumbs
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    &__link
+      margin-bottom: 20px
+      justify-content: space-between
+      width: 150px
+      &:last-child
+        margin-bottom: 0
   
 @media (max-width: 460px)
   .header
