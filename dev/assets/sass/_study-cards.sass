@@ -1,0 +1,111 @@
+.study
+  &-cards
+    padding-bottom: 2.6vw
+    &__slide
+      padding-top: 30px
+      display: flex !important
+      justify-content: center
+      flex-wrap: wrap
+    &__controls
+      text-align: center
+      &-prev
+        top: 97.7%
+        left: 40%
+      &-next
+        top: 97.7%
+        right: 40%
+      &-label
+        margin: 0 2.2vw
+        font-family: 'Roboto', sans-serif
+        font-size: 0.9vw
+        line-height: 0
+        color: $card-bg-color
+  &__card
+    margin:
+      right: 4vw
+      bottom: 3vw
+    padding: 
+      top: 2vw
+      left: 3.4vw
+      bottom: 3.6vw
+    position: relative
+    width: 27vw
+    background-color: $card-bg-color
+    border-radius: 5px
+    &:before
+      content: ''
+      position: absolute
+      width: 7vw
+      height: 7vw
+      right: 0
+      top: 0
+      background-color: $study-cards-circle-color_1
+      clip-path: circle(70% at 80% 15%)
+    &:nth-child(3n), &:first-child
+      &:before
+        background-color: $study-cards-circle-color_1
+    &:nth-child(4n)
+      &:before
+        background-color: $study-cards-circle-color_3
+    &:nth-child(5n)
+      &::before
+        background-color: $study-cards-circle-color_4
+    &:nth-child(7n), &:nth-child(2)
+      &::before
+        background-color: $study-cards-circle-color_2
+    &-amount
+      position: absolute
+      display: block
+      right: -13%
+      top: -15%
+      font-size: 5vw
+      font-weight: 700
+      &-subtitle
+        display: block
+        font-weight: 400
+        font-size: .8vw
+        line-height: 0
+    &-title
+      margin-bottom: 0.6vw
+      font-size: 1.35vw
+      line-height: 0.9vw
+    &-subtitle
+      margin-bottom: 1.4vw
+      max-width: 65%
+      font-size: 0.75vw
+      font-weight: 300
+      line-height: 0.9vw
+    &-discipline
+      &s
+        font-family: "Roboto", sans-serif
+        font-size: 0.8vw
+        font-weight: 500
+        line-height: 0.9vw
+      margin-bottom: 1.1vw
+      position: relative
+      &:before
+        content: ''
+        position: absolute
+        width: 1vw
+        height: 1vw
+        top: 50%
+        left: -1.7vw
+        transform: translateY(-50%)
+        border-radius: 50%
+        background-color: $study-cards-dots-color
+      &:last-child
+        margin-bottom: 0
+    &-button
+      padding: 0.4vw 1.2vw
+      position: absolute
+      bottom: 1.1vw
+      right: 2.5vw
+      color: $alt-text-color
+      background-color: $study-cards-button-color
+      border-radius: 5px
+      transition: .2s
+      will-change: color, background-color
+      &:hover
+        background-color: $alt-text-color
+        color: $study-cards-button-color
+    

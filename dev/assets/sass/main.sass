@@ -9,6 +9,19 @@ body
   width: 71vw
   // max-width: 1360px
 
+.section
+  &__separator
+    position: relative
+    &::after
+      content: ''
+      position: absolute
+      width: 31vw
+      height: 2px
+      left: 50%
+      bottom: 0
+      transform: translateX(-50%)
+      background-color: $card-bg-color
+
 .text
   &_highlight
     color: $accent-text-color
@@ -16,12 +29,33 @@ body
   &_break
     display: block
 
+.arrow
+  padding: 15px
+  background-color: #fff
+  // top: 50%
+  // transform: translateY(-50%)
+  fill: $card-bg-color
+  transition: background-color .2s
+  will-change: background-color
+  z-index: 200
+  cursor: pointer
+  &:hover
+    background-color: $accent-color
+  &-prev
+    width: 20px
+    height: 20px
+    // left: 8.7vw
+    transform: rotate(-90deg) 
+  &-next
+    width: 20px
+    height: 20px
+    // right: 8.7vw
+    transform: rotate(90deg)
+
 .slick
   &-arrow
     padding: 15px
     background-color: #fff
-    top: 50%
-    transform: translateY(-50%)
     fill: $card-bg-color
     transition: background-color .2s
     will-change: background-color
@@ -29,11 +63,13 @@ body
     &:hover
       background-color: $accent-color
   &-prev
-    left: 8.7vw
-    transform: translateY(-50%) rotate(-90deg) 
+    width: 20px
+    height: 20px
+    transform: rotate(-90deg) 
   &-next
-    right: 8.7vw
-    transform: translateY(-50%) rotate(90deg)
+    width: 20px
+    height: 20px
+    transform: rotate(90deg)
   &-dots
     bottom: 10px
     li
@@ -62,4 +98,5 @@ body
 @import 'header.sass'
 @import 'slider.sass'
 @import 'breadcrumbs.sass'
+@import 'study-cards.sass'
 @import 'media.sass'

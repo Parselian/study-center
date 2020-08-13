@@ -24,6 +24,16 @@
         line-height: 1.3vw
       &-button
         font-size: 1.2vw
+  .study
+    &-cards
+      &__controls
+        &-prev, &-next
+          top: 96.7%
+    &__card
+      width: 28vw
+      &-subtitle, &-disciplines
+        font-size: 0.9vw
+        line-height: 1vw
 
 @media (max-width: 1300px)
   .button
@@ -46,6 +56,20 @@
       &-item
         &:after
           bottom: -1.5vw
+  .study
+    &-cards
+      padding-bottom: 3.6vw
+      &__controls
+        &-prev
+          left: 38%
+        &-label
+          font-size: 1.1vw
+        &-next
+          right: 38%
+    &__card
+      &-subtitle, &-disciplines
+        font-size: 1vw
+        line-height: 1.2vw
   
 @media (max-width: 1100px)
   .button
@@ -70,20 +94,30 @@
       &-item
         &:after
           bottom: -1.65vw
+  .study
+    &-cards
+      padding-bottom: 3.6vw
+      &__controls
+        &-prev
+          left: 36%
+        &-label
+          font-size: 1.1vw
+          line-height: .9vw
+        &-next
+          right: 36%
 
 @media (max-width: 992px)
   .slick
     &-arrow
-      top: unset
-      bottom: 50px
       background-color: $active-color
     &-next
-      right: 70px
       transform: rotate(90deg)
     &-prev
-      left: unset
-      right: 130px
       transform: rotate(-90deg)
+  .section
+    &__separator
+      &:after
+        width: 350px
   .header__wrap
     padding: 0 15px
   .container
@@ -128,6 +162,16 @@
       &-text
         font-size: 12px
   .slider
+    &__arrow
+      &-prev
+        top: unset
+        right: 130px
+        bottom: 50px
+        left: unset
+      &-next
+        top: unset
+        right: 70px
+        bottom: 50px
     &__slide
       &-content
         padding:
@@ -161,6 +205,69 @@
         width: 12px
         height: 12px
         right: -25px
+  .study
+    &-cards
+      padding-bottom: 60px
+      &__controls
+        &-prev, &-next
+          top: 97.7%
+          padding: 10px
+          width: 15px
+          height: 15px
+        &-prev
+          left: 38%
+        &-next
+          right: 38%
+        &-label
+          color: $accent-color
+          font-size: 12px
+          font-weight: 500
+          line-height: 0
+    &__card
+      margin:
+        right: 35px
+        bottom: 30px
+      padding: 
+        top: 20px
+        bottom: 35px
+        left: 35px
+      width: 40%
+      &:before
+        width: 80px
+        height: 80px
+      &-amount
+        font-size: 46px
+        top: -10%
+        right: -10%
+        &-subtitle
+          font-size: 12px
+      &-title
+        max-width: 75%
+        margin-bottom: 10px
+        font-size: 14px
+        line-height: 14px
+      &-subtitle
+        margin-bottom: 15px
+        max-width: 84%
+        font-size: 12px
+        line-height: 14px
+      &-discipline
+        &s
+          font-size: 12px
+          line-height: 14px
+          margin-bottom: 10px
+        margin-bottom: 10px
+        &::before
+          width: 10px
+          height: 10px
+          left: -15px
+      &-button
+        padding: 4px 12px
+        bottom: 10px
+        right: 20px
+        &:hover
+          color: $alt-text-color
+          background-color: $study-cards-button-color
 
 @media (max-width: 768px)
   .container
@@ -203,6 +310,26 @@
       &-icon
         width: 30px
         height: 30px
+  .study
+    &-cards
+      &__controls
+        &-prev
+          left: 34%
+        &-next
+          right: 34%
+    &__card
+      padding: 
+        left: 25px
+        right: 15px
+      width: 35%
+      &:before
+        clip-path: circle(70% at 90% 15%)
+      &-amount
+        top: -7%
+        right: -15%
+      &-subtitle
+        max-width: 65%
+
 
 @media (max-width: 576px)
   .container
@@ -241,6 +368,22 @@
       width: 150px
       &:last-child
         margin-bottom: 0
+  .study
+    &-cards
+      &__slide
+        display: flex
+        flex-direction: column
+        align-items: center
+      &__controls
+        &-prev
+          left: 30%
+        &-label
+          line-height: 14px
+        &-next
+          right: 30%
+    &__card
+      width: 90%
+      max-width: 250px
   
 @media (max-width: 460px)
   .header
@@ -252,3 +395,17 @@
     &__slide
       &-text
         font-size: 12px
+  .study
+    &-cards
+      &__controls
+        &-prev
+          left: 24%
+        &-next
+          right: 24%
+    &__card
+      max-width: 220px
+      &::before
+        clip-path: circle(70% at 90% 10%)
+      &-amount
+        right: -10%
+        font-size: 36px
