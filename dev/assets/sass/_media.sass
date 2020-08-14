@@ -34,6 +34,22 @@
       &-subtitle, &-disciplines
         font-size: 0.9vw
         line-height: 1vw
+  .services
+    &-cards
+      &__title
+        font-size: 1.4vw
+      &__subtitle
+        font-size: .9vw
+    &__card
+      margin-right: 3.7vw
+      &-img
+        width: 3vw
+        height: 2.5vw
+      &-subtitle
+        font-size: 0.9vw
+        line-height: 1vw
+      &-link
+        font-size: 0.8vw
 
 @media (max-width: 1300px)
   .button
@@ -70,6 +86,28 @@
       &-subtitle, &-disciplines
         font-size: 1vw
         line-height: 1.2vw
+  .services
+    &-cards
+      &__title
+        font-size: 1.4vw
+      &__subtitle
+        font-size: 0.9vw
+    &__card
+      margin-right: 2.7vw
+      &:first-child
+        margin-left: 1vw
+      &:last-child
+        margin-right: 1vw
+      &-img
+        width: 3.5vw
+        height: 3vw
+      &-title
+        font-size: 1.1vw
+      &-subtitle
+        font-size: 1vw
+        line-height: 1.1vw
+      &-link
+        font-size: 0.9vw
   
 @media (max-width: 1100px)
   .button
@@ -105,6 +143,29 @@
           line-height: .9vw
         &-next
           right: 36%
+  .services
+    &-cards
+      &__title
+        font-size: 1.5vw
+      &__subtitle
+        font-size: 1vw
+    &__card
+      margin-right: 2.7vw
+      padding-right: 1.2vw
+      &:first-child
+        margin-left: 1vw
+      &:last-child
+        margin-right: 1vw
+      &-img
+        width: 3vw
+        height: 2.5vw
+      &-title
+        font-size: 1.1vw
+      &-subtitle
+        font-size: 1vw
+        line-height: 1.1vw
+      &-link
+        font-size: 0.9vw
 
 @media (max-width: 992px)
   .slick
@@ -268,6 +329,51 @@
         &:hover
           color: $alt-text-color
           background-color: $study-cards-button-color
+  .services
+    &-cards
+      padding: 
+        top: 40px
+        bottom: 150px
+      line-height: 18px
+      &__title
+        margin-bottom: 10px
+        font-size: 18px
+      &__subtitle
+        margin-bottom: 50px
+        font-size: 14px
+      &__slider
+        &-prev, &-next
+          padding: 10px
+          top: 105%
+          width: 15px
+          height: 15px
+        &-prev
+          left: 42%
+        &-next
+          right: 42%
+    &__card
+      padding: 15px
+      margin-right: 60px
+      width: 30%
+      &:first-child
+        margin-left: 20px
+      &:last-child
+        margin-right: 20px
+      &-img
+        width: 30px
+        height: 30px
+      &-title
+        margin-bottom: 15px
+        font-size: 13px
+        line-height: 14px
+        &:after
+          bottom: -9px
+      &-subtitle
+        margin-bottom: 60px
+        line-height: 14px
+        font-size: 12px
+      &-link
+        font-size: 12px
 
 @media (max-width: 768px)
   .container
@@ -329,6 +435,13 @@
         right: -15%
       &-subtitle
         max-width: 65%
+  .services
+    &-cards
+      padding: 
+        top: 40px
+        bottom: 100px
+      &__slide
+        justify-content: center
 
 
 @media (max-width: 576px)
@@ -384,6 +497,21 @@
     &__card
       width: 90%
       max-width: 250px
+  .services
+    &-cards
+      &__slider
+        &-prev
+          left: 40%
+        &-next
+          right: 40%
+    &__card
+      margin-right: 30px
+      width: 50%
+      max-width: 260px
+      &:first-child
+        margin-left: 15px
+      &:last-child
+        margin-right: 15px
   
 @media (max-width: 460px)
   .header
@@ -409,3 +537,22 @@
       &-amount
         right: -10%
         font-size: 36px
+  .services
+    &-cards
+      &__slider
+        &-prev
+          left: 36%
+        &-next
+          right: 36%
+    &__card
+      width: 100%
+      max-width: 220px
+      &-img
+        width: 40px
+        height: 40px
+      &-title
+        font-size: 18px
+        line-height: 22px
+      &-subtitle
+        font-size: 14px
+        line-height: 18px

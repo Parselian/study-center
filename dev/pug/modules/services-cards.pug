@@ -1,0 +1,26 @@
+mixin serviceCard(title, subtitle, path)
+  .services__card
+    svg.services__card-img
+      use(xlink:href=path)
+    h3.services__card-title= title
+    .services__card-subtitle= subtitle
+    a.services__card-link(href="#") Узнать подробнее >
+
+
+
+.services-cards
+  .services-cards__wrap.container
+    h2.services-cards__title Услуги нашего учебного центра
+    .services-cards__subtitle.
+      Мы предлагаем не только обучение и переподготовку по многим популярным направлениям </br> мы предлагаем целый комплекс услуг для вашего бизнеса
+    #services-cards__slider.services-cards__slider
+      .services-cards__slide
+        +serviceCard('Аутсорсинг по охране труда 1', 'Мы предлагаем не только профессиональное обучение, но и бессрочный доступ ко всем материалам в нашей базе', './assets/images/svg/symbol/sprite.svg#team')
+        +serviceCard('Аутсорсинг по охране труда 2', 'Мы предлагаем не только профессиональное обучение, но и бессрочный доступ ко всем материалам в нашей базе', './assets/images/svg/symbol/sprite.svg#team')
+        +serviceCard('Аутсорсинг по  охране труда 3', 'Мы предлагаем не только профессиональное обучение, но и бессрочный доступ ко всем материалам в нашей базе', './assets/images/svg/symbol/sprite.svg#team')
+        +serviceCard('Аутсорсинг по  охране труда 4', 'Мы предлагаем не только профессиональное обучение, но и бессрочный доступ ко всем материалам в нашей базе', './assets/images/svg/symbol/sprite.svg#team')
+      .services-cards__slide
+        +serviceCard('Аутсорсинг по охране труда 5', 'Мы предлагаем не только профессиональное обучение, но и бессрочный доступ ко всем материалам в нашей базе', './assets/images/svg/symbol/sprite.svg#team')
+        +serviceCard('Аутсорсинг по охране труда 6', 'Мы предлагаем не только профессиональное обучение, но и бессрочный доступ ко всем материалам в нашей базе', './assets/images/svg/symbol/sprite.svg#team')
+        +serviceCard('Аутсорсинг по  охране труда 7', 'Мы предлагаем не только профессиональное обучение, но и бессрочный доступ ко всем материалам в нашей базе', './assets/images/svg/symbol/sprite.svg#team')
+        +serviceCard('Аутсорсинг по  охране труда 8', 'Мы предлагаем не только профессиональное обучение, но и бессрочный доступ ко всем материалам в нашей базе', './assets/images/svg/symbol/sprite.svg#team')
