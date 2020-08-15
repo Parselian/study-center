@@ -6,7 +6,9 @@ window.addEventListener('DOMContentLoaded', () => {
         studyCardAmounts = document.querySelectorAll('.study__card-amount'),
         studyCards = studyCardsSlider.querySelectorAll('.study__card'),
         servicesCardsSlider = document.getElementById('services-cards__slider'),
-        servicesCards = servicesCardsSlider.querySelectorAll('.services__card');
+        servicesCards = servicesCardsSlider.querySelectorAll('.services__card'),
+        articlesSlider = document.getElementById('articles-slider'),
+        articlesCards = articlesSlider.querySelectorAll('.articles__card');
 
   burgerBtn.addEventListener('click', () => {
     burgerBtn.classList.toggle('burger-button_open');
@@ -43,8 +45,15 @@ window.addEventListener('DOMContentLoaded', () => {
       nextArrow: '<svg class="services-cards__slider-next slick-next slick-arrow"><use xlink:href="./assets/images/svg/symbol/sprite.svg#arrow"></use></svg>',
     });
   };
-  // activateServicesCardsSlider();
 
+  const activateArticlesSlider = () => {
+    $('#articles-slider').slick({
+      arrows: false,
+      dots: true,
+      // autoplay: true,
+      autoplaySpeed: 3000
+    });
+  };
 
   const correctElemPosition = () => {
     studyCardAmounts.forEach(item => {
@@ -55,7 +64,7 @@ window.addEventListener('DOMContentLoaded', () => {
   };
   correctElemPosition();
 
-  const reassemblySlides = (sliderWrap, selector, sliderCards, xlAmount, lgAmount, mdAmount, smAmount, xsAmount, startSlider) => {
+  const adaptSlides = (sliderWrap, selector, sliderCards, xlAmount, lgAmount, mdAmount, smAmount, xsAmount, startSlider) => {
     let slideWrap = document.createElement('div'),
         counter = 0;
 
@@ -103,6 +112,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     removeSlides();
   };
-  reassemblySlides(studyCardsSlider, 'study-cards__slide', studyCards, 6, 6, 4, 2, 2, activateStudyCardsSlider);
-  reassemblySlides(servicesCardsSlider, 'services-cards__slide', servicesCards, 4, 3, 2, 2, 1, activateServicesCardsSlider);
+  adaptSlides(studyCardsSlider, 'study-cards__slide', studyCards, 6, 6, 4, 2, 2, activateStudyCardsSlider);
+  adaptSlides(servicesCardsSlider, 'services-cards__slide', servicesCards, 4, 3, 2, 2, 1, activateServicesCardsSlider);
+  adaptSlides(articlesSlider, 'articles__slide', articlesCards, 3, 3, 2, 2, 1, activateArticlesSlider);
 });

@@ -75,13 +75,15 @@ body
     li
       button
         &:before
-          color: grey
-          font-size: 11px
+          font-size: 22px
+          color: $card-bg-color
+          opacity: 1
     li.slick-active
       button
         &:before
-          font-size: 12px
+          font-size: 22px
           color: $active-color
+          opacity: 1
 
 .button
   font-size: 0.86vw
@@ -100,4 +102,5 @@ body
 @import 'breadcrumbs.sass'
 @import 'study-cards.sass'
 @import 'services-cards.sass'
+@import 'articles.sass'
 @import 'media.sass'
