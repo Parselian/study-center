@@ -63,6 +63,28 @@
       padding-top: 1.3vw
       &-subtitle, &-link
         font-size: 0.8vw
+  .faq
+    &__employee
+      &-name, &-state
+        font-size: 0.9vw
+      &-text
+        font-size: 0.8vw
+    &__question
+      &-title
+        font-size: 1.1vw
+      &-subtitle
+        font-size: 0.9vw
+        line-height: 1.1vw
+    &__contacts
+      &-block
+        line-height: 1vw
+        font-size: 0.9vw
+        &-img
+          width: 3vw
+          height: 3vw
+          left: -3.6vw
+        &-title
+          margin-bottom: 0.5vw
 
 @media (max-width: 1300px)
   .button
@@ -132,7 +154,35 @@
         line-height: 1vw
       &-link
         font-size: 0.9vw
-  
+  .faq
+    &__col
+      &:first-child
+        width: 55%
+    &__employee
+      &-name, &-state
+        font-size: 1vw
+      &-text
+        font-size: 0.9vw
+    &__question
+      &-block
+        width: 100%
+      &-title
+        font-size: 1.2vw
+      &-subtitle
+        font-size: 1vw
+        line-height: 1.1vw
+      &-label
+        font-size: 1vw
+    &__contacts
+      margin-top: 5.1vw
+      &-block
+        font-size: 1vw
+        line-height: 1.1vw
+        &-img
+          width: 3.4vw
+          height: 3.4vw
+          left: -4vw
+
 @media (max-width: 1100px)
   .button
     font-size: 1.1vw
@@ -459,6 +509,101 @@
           height: inherit
       &-link
         font-size: 12px
+  .faq
+    padding-top: 30px
+    padding-bottom: 60px
+    &__col
+      &-appeal
+        margin-left: 60px
+        font-size: 12px
+        line-height: 14px
+        &:before
+          width: 50px
+          height: 50px
+          left: -15px
+    &__title
+      font-size: 16px
+      line-height: 60px
+    &__employee
+      &-info
+        margin-left: 50px
+      &-photo
+        width: 185px
+      &-text
+        margin-bottom: 40px
+    &__list
+      margin-bottom: 30px
+      font-size: 12px
+      line-height: 40px
+      &-item
+        margin-right: 10px
+        line-height: 60px
+        &:before
+          width: 35px
+          height: 35px
+        &:first-child
+          margin-right: 15px
+          font-size: 14px
+          &:before
+            left: 10px
+            top: 15px
+        &:nth-child(2)
+          &:before
+            width: 20px
+            height: 20px
+            left: -5px
+            top: 50%
+        &:nth-child(3)
+          &::before
+            right: -10px
+            top: 35px
+        &:nth-child(4)
+          &::before
+            left: 15px
+            top: 25px
+    &__col
+      &:first-child
+        margin-right: 40px
+        width: 70%
+    &__employee
+      &-info
+        max-width: 100%
+      &-name, &-state
+        font-size: 12px
+      &-name
+        margin-bottom: 5px
+      &-state
+        margin-bottom: 10px
+      &-text
+        font-size: 12px
+        line-height: 14px
+    &__question
+      &-block
+        margin-bottom: 22px
+      &-title
+        margin-bottom: 5px
+        font-size: 14px
+      &-subtitle
+        margin-bottom: 6px
+        font-size: 12px
+        line-height: 14px
+      &-label
+        margin-right: 10px
+        padding: 3px 4px
+        font-size: 10px
+    &__contacts
+      &-block
+        margin-right: 90px
+        font-size: 12px
+        line-height: 14px
+        &-img
+          width: 40px
+          height: 40px
+          left: -50px
+        &-title
+          margin-bottom: 5px
+        &-link
+          padding: 2px 4px
 
 @media (max-width: 768px)
   .container
@@ -535,6 +680,62 @@
         margin-top: 30px
     &__card
       width: 50%
+  .faq
+    &__wrap
+      flex-direction: column
+      align-items: center
+    &__title
+      font-size: 18px
+    &__col
+      &-appeal
+        display: none
+      &:first-child
+        margin-right: 0
+        width: 100%
+    &__employee
+      &-photo
+        display: inline-block
+        width: 200px
+      &-info
+        width: 50%
+        display: inline-block
+        &:before
+          height: 80%
+      &-name, &-state
+        font-size: 14px
+    &__list
+      font-size: 14px
+      &-item
+        &:first-child
+          font-size: 16px
+    &__question
+      &-block
+        margin-bottom: 35px
+      &-title
+        margin-bottom: 15px
+        font-size: 16px
+      &-subtitle
+        margin-bottom: 10px
+        font-size: 14px
+        line-height: 16px
+      &-label
+        padding: 8px
+        font-size: 12px
+    &__contacts
+      margin:
+        top: 40px
+        left: 60px
+      &-block
+        font-size: 14px
+        line-height: 16px
+        &-img
+          width: 50px
+          height: 50px
+          left: -60px
+        &-title
+          margin-bottom: 10px
+        &-link
+          padding: 4px
 
 @media (max-width: 576px)
   .container
@@ -615,6 +816,53 @@
         margin-right: 0
     &__card
       width: 100%
+  .faq
+    &__col
+      width: 95%
+      margin: 0 auto
+      &:first-child
+        display: flex
+        flex-direction: column
+        align-items: center
+    &__employee
+      &-photo
+        margin-bottom: 30px
+        max-width: 280px
+        width: 80%
+        img, source
+          width: 100%
+      &-info
+        margin: 0 auto
+        width: 95%
+      &-name, &-state
+        font-size: 16px
+        line-height: 18px
+      &-text
+        margin-bottom: 30px
+        font-size: 14px
+        line-height: 16px
+    &__list
+      flex-wrap: wrap
+      justify-content: center
+      text-align: center
+      &-item
+        width: 45%
+        &:nth-child(2)
+          &:before
+            left: 20px
+        &:nth-child(3)
+          &:before
+            right: 25px
+        &:nth-child(4)
+          &:before
+            left: 35px
+            top: 14px
+    &__question
+      &-block
+        line-height: 16px
+    &__contacts
+      &-block
+        margin-right: 80px
 
 @media (max-width: 460px)
   .header
@@ -679,3 +927,27 @@
         display: flex
         flex-wrap: wrap
         justify-content: center
+  .faq
+    &__list
+      &-item
+        width: 45%
+        &:nth-child(2)
+          &:before
+            left: 25px
+        &:nth-child(3)
+          &:before
+            right: 30px
+        &:nth-child(4)
+          &:before
+            left: 40px
+            top: 14px
+    &__contacts
+      margin-top: 0
+      margin-left: 40px
+      flex-direction: column
+      align-items: center
+      &-block
+        margin: 0
+        margin-bottom: 30px
+        &:last-child
+          margin-bottom: 0

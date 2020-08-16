@@ -38,7 +38,7 @@ window.addEventListener('DOMContentLoaded', () => {
       slidesToShow: 1,
     });
   };
-
+  
   const activateServicesCardsSlider = () => {
     $('#services-cards__slider').slick({
       prevArrow: '<svg class="services-cards__slider-prev slick-prev slick-arrow"><use xlink:href="./assets/images/svg/symbol/sprite.svg#arrow"></use></svg>',
@@ -63,6 +63,8 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   };
   correctElemPosition();
+
+
 
   const adaptSlides = (sliderWrap, selector, sliderCards, xlAmount, lgAmount, mdAmount, smAmount, xsAmount, startSlider) => {
     let slideWrap = document.createElement('div'),
@@ -91,7 +93,9 @@ window.addEventListener('DOMContentLoaded', () => {
       }
 
       sliderCards.forEach((item, i) => {
-        clonedSlideWrap.insertAdjacentElement('beforeend', item);
+        if (!item.matches('.hidden')) {
+          clonedSlideWrap.insertAdjacentElement('beforeend', item);
+        }
         counter++;
 
         if (window.innerWidth > 992) {
@@ -115,4 +119,31 @@ window.addEventListener('DOMContentLoaded', () => {
   adaptSlides(studyCardsSlider, 'study-cards__slide', studyCards, 6, 6, 4, 2, 2, activateStudyCardsSlider);
   adaptSlides(servicesCardsSlider, 'services-cards__slide', servicesCards, 4, 3, 2, 2, 1, activateServicesCardsSlider);
   adaptSlides(articlesSlider, 'articles__slide', articlesCards, 3, 3, 2, 2, 1, activateArticlesSlider);
+
+
+
+  const toggleSliderCategories = (sliderId) => {
+    const articles = document.querySelector('.articles');
+
+    articles.addEventListener('click', (e) => {
+      const target = e.target;
+
+      if (target.matches('.articles__button')) {
+        slidesFiltration(target.getAttribute('data-cat'));
+      }
+    });
+    
+    const slidesFiltration = (attr) => {
+      $(sliderId).slick('unslick');
+
+      articlesCards.forEach(item => {
+        if (item.getAttribute('data-cat') === attr || attr === 'all') {
+          item.classList.remove('hidden');
+        } else {
+          item.classList.add('hidden');
+        }
+      });
+    };
+  };
+  toggleSliderCategories('#articles-slider');
 });

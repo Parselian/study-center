@@ -1,0 +1,41 @@
+mixin faqQuestion(title, subtitle, label1, label2)
+  .faq__question-block
+    .faq__question-title= title
+    .faq__question-subtitle= subtitle
+    .faq__question-labels
+      .faq__question-label=label1
+      .faq__question-label=label2
+
+.faq.section__separator
+  .faq__wrap.container
+    .faq__col
+      h2.faq__title Вопросы и ответы
+      picture.faq__employee-photo
+        img(src="./assets/images/questions-woman.png" alt='женщина')
+      .faq__employee-info
+        .faq__employee-name Мария Коваль
+        .faq__employee-state Cпециалист техничкского <br> отдела учебного центра
+        .faq__employee-text.
+          Мы подготовили для вас ответы на самые распространенные вопросы, поступающие к нам ежедневно. Все ответы сформированы нашими специалистами на основе полученного многолетнего опыта
+      .faq__col-appeal Есть вопросы? <br> Получите ответы!
+    .faq__col
+      ul.faq__list
+        li.faq__list-item #Все вопросы?
+        li.faq__list-item #Охрана труда?
+        li.faq__list-item #Медицина?
+        li.faq__list-item #Учебный центр?
+      +faqQuestion('Сертификация смывающих средств', 'По какому техническому регламенту сертифицируются или декларируются смывающие средства, и требуется ли заключение Минпромторга на такие средства?', '#Охрана труда', '#Учебный центр')
+      +faqQuestion('Сертификация смывающих средств', 'По какому техническому регламенту сертифицируются или декларируются смывающие средства, и требуется ли заключение Минпромторга на такие средства?', '#Охрана труда', '#Учебный центр')
+      +faqQuestion('Сертификация смывающих средств', 'По какому техническому регламенту сертифицируются или декларируются смывающие средства, и требуется ли заключение Минпромторга на такие средства?', '#Охрана труда', '#Учебный центр')
+      .faq__contacts
+        .faq__contacts-block
+          svg.faq__contacts-block-img
+            use(xlink:href="./assets/images/svg/symbol/sprite.svg#whatsapp")
+          .faq__contacts-block-title Напишите нам <br> в whatsapp
+          a(href="tel:+74994213521").faq__contacts-block-link +7 (499) 42 135 21
+
+        .faq__contacts-block
+          svg.faq__contacts-block-img
+            use(xlink:href="./assets/images/svg/symbol/sprite.svg#gmail")
+          .faq__contacts-block-title Напишите нам <br> на e-mail
+          a(href="mailto:info@gkroskom.ru").faq__contacts-block-link info@gkroskom.ru
