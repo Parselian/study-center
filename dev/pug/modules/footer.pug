@@ -1,0 +1,43 @@
+mixin menuItem(link, title)
+  li.footer__list-item
+    a(href= link).footer__list-link= title
+
+.footer
+  .footer__wrap.container
+    .footer__col
+      .footer__logo
+        picture.footer__logo-img
+          img(src="./assets/images/logo.png")
+        h2.footer__logo-title.text_highlight Учебный <br> центр
+      .footer__contacts
+        a(href="mailto:info@gkroskom.ru").footer__contacts-link info@gkroskom.ru
+        a(href="tel:+74951045777").footer__contacts-link +7 (495) 104-57-77
+        button(type="submit").footer__contacts-callback Обратная связь
+    .footer__col
+      h3.footer__col-title Учебный Центр
+      ul.footer__list
+        +menuItem('#', 'Охрана труда')
+        +menuItem('#', 'Пожарно-технический минимум')
+        +menuItem('#', 'Электробезопасность')
+        +menuItem('#', 'Промышленная безопасность')
+        +menuItem('#', 'Охрана труда на высоте')
+        +menuItem('#', 'Оказание первой помощи')
+        +menuItem('#', 'Рабочие профессии')
+        +menuItem('#', 'Теплоэнергетика')
+        +menuItem('#', 'Повышение квалификации')
+        +menuItem('#', 'Профессиональная переподготовка')
+    .footer__col
+      h3.footer__col-title Услуги
+      ul.footer__list
+        +menuItem('#', 'Охрана труда')
+        +menuItem('#', 'Пожарно-технический минимум')
+        +menuItem('#', 'Электробезопасность')
+        +menuItem('#', 'Промышленная безопасность')
+        +menuItem('#', 'Охрана труда на высоте')
+      h3.footer__col-title О компании
+      ul.footer__list
+        +menuItem('#', 'Новости')
+        +menuItem('#', 'Статьи')
+        +menuItem('#', 'Вопросы-ответы')
+        +menuItem('#', 'Сведения об обучающей организации')
+    .footer__col gkroskom.ru <br> 2020 <br> все права защищены <br> правовая информация
