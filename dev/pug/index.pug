@@ -9,7 +9,44 @@ block content
   include ./modules/services-cards
   include ./modules/articles
   include ./modules/faq
+  include ./modules/contacts
 
   script(src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous")
   script(type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js")
+  script.
+    setTimeout(() => {
+      let elem = document.createElement('script');
+      elem.src = 'https://api-maps.yandex.ru/2.1/?apikey=562a8a40-1a69-47ee-abe6-136d498e5647&lang=ru_RU&onload=getYaMap';
+      document.getElementsByTagName('body')[0].appendChild(elem);
+    }, 2000);
+
+    function getYaMap() {
+      let myMap = new ymaps.Map("map", {
+        // Координаты центра карты.
+        // Порядок по умолчанию: «широта, долгота».
+        center: [55.812803, 37.829376],
+        // Уровень масштабирования. Допустимые значения:
+        // от 0 (весь мир) до 19.
+        zoom: 15
+      });
+
+      let mapPlacemark = new ymaps.Placemark([55.812550, 37.832827], {}, {
+        iconLayout: 'default#image',
+        iconImageHref: './assets/images/placeholder.png',
+        iconImageSize: [80, 86],
+        iconImageOffset: [-10, -90]
+      });
+
+      myMap.geoObjects.add(mapPlacemark);
+      myMap.controls.remove('geolocationControl');
+      myMap.controls.remove('searchControl');
+      myMap.controls.remove('trafficControl');
+      myMap.controls.remove('typeSelector');
+      myMap.controls.remove('fullscreenControl');
+      myMap.controls.remove('zoomControl');
+      myMap.controls.remove('routeButtonControl');
+      myMap.controls.remove('rulerControl');
+
+      myMap.behaviors.disable(['drag']);
+    }
   script(src="assets/js/main.js")
