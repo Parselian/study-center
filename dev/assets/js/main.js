@@ -145,5 +145,5 @@ window.addEventListener('DOMContentLoaded', () => {
       });
     };
   };
-  toggleSliderCategories('#articles-slider');
+  // toggleSliderCategories('#articles-slider');
 });

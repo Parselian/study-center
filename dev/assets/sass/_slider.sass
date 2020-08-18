@@ -1,4 +1,14 @@
 .slider
+  position: relative
+  &__mask
+    position: absolute
+    display: block
+    width: 100vw
+    height: 11vw
+    left: 50%
+    bottom: -9vw
+    transform: translateX(-50%)
+    z-index: 1
   &__arrow
     &-prev
       top: 50%
@@ -49,6 +59,9 @@
         background-color: lighten($active-color, 5%)
     &-img
       position: absolute
-      height: 24vw
+      height: 29vw
       right: 15vw
       top: 5%
+      &_masked
+        top: unset
+        bottom: 0

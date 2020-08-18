@@ -1,0 +1,49 @@
+.services
+  padding: 
+    top: 3.2vw
+    bottom: 5.6vw
+  &__col
+    width: 50%
+    line-height: 1.2vw
+    &:first-child
+      margin-right: 5.5vw
+    &-title
+      margin-bottom: 1.2vw
+      font-size: 1.3vw
+      font-weight: 700
+    &-text
+      margin-bottom: 4.1vw
+      font-size: .8vw
+      font-weight: 300
+  &__video
+    margin-bottom: 21.8vw
+    padding: 1.7vw 1.45vw 2.3vw 8.6vw
+    position: relative
+    background-color: $card-bg-color
+    border-radius: 5px
+    box-shadow: 0 6px 17px 1px rgba(67, 87, 183, 0.11)
+    overflow: hidden
+    &::before
+      position: absolute
+      content: ''
+      width: 6.7vw
+      height: 6.7vw
+      top: 0
+      left: 0
+      background-color: $accent-bg-color
+      clip-path: circle(80% at 18% 18%)
+    &-icon
+      position: absolute
+      width: 3.3vw
+      height: 2.6vw
+      top: 1.5vw
+      left: 1.2vw
+    &-title
+      margin-bottom: 0.8vw
+      font-size: 1.5vw
+      font-weight: 400
+      line-height: 1.6vw
+    &-text
+      font-size: .7vw
+      font-weight: 300
+      line-height: .9vw

@@ -1,23 +1,31 @@
 #promo-slider.slider
   .slider__slide
-    //- img(src="./assets/images/slider-bg.jpg", alt="фон").slider__slide_bg
+    if (sliderMask == true)
+      img(src="./assets/images/slider-bg.jpg", alt="фон").slider__slide_bg
     .slider__slide-content.container
       .slider__slide-info
-        h2.slider__slide-title Обучение по охране труда - </br> дистанционно. 
-          span.text_highlight Скидки до 25% </br>
+        h2.slider__slide-title Обучение по охране труда - <br> дистанционно. 
+          span.text_highlight Скидки до 25% <br>
           span.line_break.text_highlight при заявке в Мае
         .slider__slide-text.
           Вы можете забронировать место в группе сегодня, а оплатить в течении месяца. Цена будет сохранена за вами.
         button.slider__slide-button.button Получить скидку
-        img(src= sliderImg).slider__slide-img
+        if (sliderMask == true)
+          img(src= sliderImg alt="женщина").slider__slide-img.slider__slide-img_masked
+        else
+          img(src= sliderImg alt="женщина").slider__slide-img
   .slider__slide
-    //- img(src="./assets/images/slider-bg.jpg", alt="фон").slider__slide_bg
+    if (sliderMask == true)
+      img(src="./assets/images/slider-bg.jpg", alt="фон").slider__slide_bg
     .slider__slide-content.container
       .slider__slide-info
-        h2.slider__slide-title Обучение по охране труда - </br> дистанционно. 
-          span.text_highlight Скидки до 25% </br>
+        h2.slider__slide-title Обучение по охране труда - <br> дистанционно. 
+          span.text_highlight Скидки до 25% <br>
           span.line_break.text_highlight при заявке в Мае
         .slider__slide-text.
-          Вы можете забронировать место в группе сегодня, а оплатить в течении </br> месяца. Цена будет сохранена за вами.
+          Вы можете забронировать место в группе сегодня, а оплатить в течении <br> месяца. Цена будет сохранена за вами.
         button.slider__slide-button.button Получить скидку
-        img(src= sliderImg).slider__slide-img
+        if (sliderMask == true)
+          img(src= sliderImg alt='женщина').slider__slide-img.slider__slide-img_masked
+        else
+          img(src= sliderImg alt='женщина').slider__slide-img

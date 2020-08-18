@@ -1,0 +1,19 @@
+.form
+  .form__wrap
+    h3.form__title Заявка на обучение
+      svg.form__icon
+        use(xlink:href="./assets/images/svg/symbol/sprite.svg#arrow")
+    .form__subtitle.
+      Не тратьте время, оформите заявку и наш специалист за 5 минут подберет для вас необходимую услугу, удобную форму обучения и расскажет о всех нюансах
+    form(method="POST", action="#")
+      .form__input-wrap
+        label(for="client-name").form__input-label Укажите ваше имя
+        input(id="client-name" type="text" name="client-name").form__input
+      .form__input-wrap
+        label(for="client-phone").form__input-label Укажите ваш номер телефона
+        input(id="client-phone" type="text" name="client-phone").form__input
+      .form__checkbox-wrap
+        input(id="personal-policy" type="checkbox" name="personal-policy").form__checkbox
+        label(for="personal-policy").form__checkbox-label.
+          Отправляя сведения через электронную форму, вы даете согласие на обработку, сбор, хранение и передачу третьим лицам представленной Вами информации на условиях Политики обработки персональных данных.
+      button(type="submit").form__submit Отправить заявку на подбор услуги

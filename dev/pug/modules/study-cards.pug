@@ -9,7 +9,7 @@ mixin studyCard(programAmount, title, subtitle)
       li.study__card-discipline Профессиональная подготовка
     button(type="submit").study__card-button Подробно
 
-.study-cards.section__separator
+section.study-cards.section__separator
   #study-cards-slider.container
     .study-cards__slide
       +studyCard(19, 'Охрана труда', 'Мы предлагаем не только профессиональное обучение, но и бессрочный доступ ко всем материалам в нашей базе')
@@ -25,7 +25,5 @@ mixin studyCard(programAmount, title, subtitle)
       +studyCard(20, 'Пожарно-технический минимум', 'Мы предлагаем не только профессиональное обучение, но и бессрочный доступ ко всем материалам в нашей базе')
       +studyCard(150, 'Работа на высоте', 'Мы предлагаем не только профессиональное обучение, но и бессрочный доступ ко всем материалам в нашей базе')
       +studyCard(20, 'Пожарно-технический минимум', 'Мы предлагаем не только профессиональное обучение, но и бессрочный доступ ко всем материалам в нашей базе')
-    .study-cards__slide
-      +studyCard(19, 'Охрана труда', 'Мы предлагаем не только профессиональное обучение, но и бессрочный доступ ко всем материалам в нашей базе')
   .study-cards__controls
     .study-cards__controls-label Ещё услуги

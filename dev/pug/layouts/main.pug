@@ -18,6 +18,8 @@ html(lang='ru-RU')
     section.promo
       include ../modules/header
       include ../modules/slider
+      if (sliderMask == true)
+        img(src="./assets/images/slider-mask.png" alt="маска").slider__mask
       if (show_achieves_block) 
         include ../modules/achieves-block
     include ../modules/breadcrumbs

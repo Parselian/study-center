@@ -3,10 +3,10 @@ mixin articlesCard(data_att, title, subtitle, path, href)
     .articles__card-title= title
     .articles__card-subtitle= subtitle
     picture.articles__card-img
-      img(srcset=path)
+      img(src=path alt="иконка")
     a(href=href).articles__card-link Узнать подробнее >
 
-.articles
+section.articles
   .articles__wrap.container
     h2.articles__title Профильные статьи и видео
     .articles__buttons
@@ -14,7 +14,7 @@ mixin articlesCard(data_att, title, subtitle, path, href)
       button(data-cat="labour_protection").articles__button Охрана труда
       button(data-cat="education").articles__button Образование
       button(data-cat="all").articles__button Смотреть все
-        .articles__button-counter 13
+        span.articles__button-counter 13
 
   #articles-slider.articles-slider.container
     .articles__slide
