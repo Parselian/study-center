@@ -1,0 +1,15 @@
+mixin partnersCard(path, alt)
+  picture.partners__card
+    img(src=path alt=alt)
+  
+section.partners
+  .partners__wrap.container
+    h2.partners__title Наши партнеры и клиенты
+    .partners__cards
+      +partnersCard('./assets/images/partner-x5.png', 'X5 Retail Group')
+      +partnersCard('./assets/images/partner-bristol.png', 'Бристоль')
+      +partnersCard('./assets/images/partner-transoil.png', 'Транснефть')
+      +partnersCard('./assets/images/partner-PNK.png', 'Первая Нерудная Компания')
+      +partnersCard('./assets/images/partner-west.png', 'West Construction')
+      +partnersCard('./assets/images/partner-aliance.png', 'Альянс Плюс')
+      +partnersCard('./assets/images/partner-orenburg.png', 'Оренбург Инвест Проект')
