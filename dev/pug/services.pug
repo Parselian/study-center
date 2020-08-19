@@ -4,10 +4,14 @@ block variables
   - var show_achieves_block = false
   - var sliderImg = './assets/images/slider-man.png'
   - var sliderMask = true
+  - var FAQsectionSeparator = '';
 
 block content
   include ./modules/section-services
   include ./modules/partners
+  include ./modules/articles
+  include ./modules/faq
+  include ./modules/footer
 
   script(src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous")
   script(src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js")

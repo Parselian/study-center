@@ -3,7 +3,9 @@
 window.addEventListener('DOMContentLoaded', () => {
   const burgerBtn = document.querySelector('header .burger-button'),
         accordeonSlider = document.getElementById('accordeon-slider'),
-        accordeonCards = accordeonSlider.querySelectorAll('.accordeon__card');
+        accordeonCards = accordeonSlider.querySelectorAll('.accordeon__card'),
+        articlesSlider = document.getElementById('articles-slider'),
+        articlesCards = articlesSlider.querySelectorAll('.articles__card');
 
   burgerBtn.addEventListener('click', () => {
     burgerBtn.classList.toggle('burger-button_open');
@@ -32,6 +34,14 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   };
 
+  const activateArticlesSlider = () => {
+    $('#articles-slider').slick({
+      arrows: false,
+      dots: true,
+      // autoplay: true,
+      autoplaySpeed: 3000
+    });
+  };
 
   const adaptSlides = (sliderWrap, selector, sliderCards, xlAmount, lgAmount, mdAmount, smAmount, xsAmount, startSlider) => {
     let slideWrap = document.createElement('div'),
@@ -84,4 +94,22 @@ window.addEventListener('DOMContentLoaded', () => {
     removeSlides();
   };
   adaptSlides(accordeonSlider, 'accordeon-slider__slide', accordeonCards, 10, 6, 6, 6, 3, activateAccordeonSlider);
+  adaptSlides(articlesSlider, 'articles__slide', articlesCards, 3, 3, 2, 2, 1, activateArticlesSlider);
+
+  const accordeon = (selector, accordeonCard, visibleInfoClass, iconRotatedClass) => {
+    const accordeonWrap = document.querySelector(selector);
+
+    accordeonWrap.addEventListener('click', (e) => {
+      const target = e.target;
+
+      if (target.closest(accordeonCard)) {
+        let accordeonIcon = target.parentNode.children[0].children[0],
+            accordeonCardInfo = target.parentNode.children[1];
+        
+        accordeonIcon.classList.toggle(iconRotatedClass);
+        accordeonCardInfo.classList.toggle(visibleInfoClass);
+      }
+    });
+  };
+  accordeon('.accordeon-slider', '.accordeon__card', 'accordeon__card-info_visible', 'accordeon__card-icon_rotated');
 });

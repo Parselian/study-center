@@ -35,7 +35,9 @@
       top: 50%
       left: 1.7vw
       transform: translateY(-50%) rotate(90deg)
-      &_unfolded
+      transition: .3s
+      will-change: transform
+      &_rotated
         transform: translateY(-50%) rotate(180deg)
     &-title
       padding: 
