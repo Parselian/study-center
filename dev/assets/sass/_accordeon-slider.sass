@@ -1,14 +1,31 @@
 .accordeon
-  &__card
-    margin-bottom: 1.2vw
-    padding: 
-      top: 1.6vw
-      bottom: 1.6vw
-      left: 3.3vw
+  &-slider
     position: relative
     line-height: 1.2vw
-    background-color: $bg-color
+    &:after
+      position: absolute
+      content: 'Ещё услуги'
+      font-size: 1vw
+      font-weight: 400
+      left: 50%
+      bottom: -3vw
+      transform: translateX(-50%)
+      color: $card-bg-color
+    &__prev, &__next
+      width: 1.3vw
+      height: 1.3vw
+      bottom: -3.8vw
+      top: unset
+    &__prev
+      left: 30%
+    &__next
+      right: 30%
+    &__slide
+      margin: 0 .7vw .7vw
+  &__card
+    margin-bottom: 1.2vw
     box-shadow: 0 6px 7px 1px rgba(218, 225, 243, 0.4)
+    cursor: pointer
     &:last-child
       margin-bottom: 0
     &-icon
@@ -18,10 +35,24 @@
       top: 50%
       left: 1.7vw
       transform: translateY(-50%) rotate(90deg)
+      &_unfolded
+        transform: translateY(-50%) rotate(180deg)
     &-title
+      padding: 
+        top: 1.6vw
+        right: 1.5vw
+        bottom: 1.6vw
+        left: 3.3vw
+      position: relative
+      background-color: $bg-color
       font-size: 1vw
     &-info
+      padding: 0
       height: 0
       overflow: hidden
       font-size: .8vw
       font-weight: 300
+      &_visible
+        padding: 1vw
+        height: auto
+        overflow: visible

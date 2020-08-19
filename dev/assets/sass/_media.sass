@@ -85,6 +85,10 @@
           left: -3.6vw
         &-title
           margin-bottom: 0.5vw
+  .accordeon
+    &-slider
+      &__prev, &__next
+        bottom: -4.1vw
 
 @media (max-width: 1300px)
   .button
@@ -201,6 +205,10 @@
           width: 3.4vw
           height: 3.4vw
           left: -4vw
+  .accordeon
+    &-slider
+      &__prev, &__next
+        bottom: -4.3vw
   .footer
     &__col
       font-size: 1.1vw
@@ -275,6 +283,10 @@
     &__button
       &:nth-child(3)
         margin-right: 1.8vw
+  .accordeon
+    &-slider
+      &__prev, &__next
+        bottom: -4.7vw
   .footer
     &__col
       line-height: 1.6vw
@@ -291,6 +303,53 @@
     &__separator
       &:after
         width: 350px
+  .form
+    padding: 30px 20px 25px 20px
+    font-size: 12px
+    line-height: 14px
+    &__wrap
+      &:before
+        width: 160px
+        height: 220px
+        top: -160px
+        right: -45px
+    form
+      padding: 
+        left: 5px
+        right: 40px
+    &__icon
+      width: 10px
+      height: 10px
+    &__title
+      margin-bottom: 30px
+      padding-left: 20px
+      font-size: 14px
+      &::after
+        width: 120px
+        bottom: -15px
+    &__subtitle
+      margin-bottom: 25px
+    &__input
+      padding: 10px 15px 10px 10px
+      width: 220px
+      font-size: 12px
+      &-wrap
+        margin-bottom: 15px
+      &-label
+        margin-bottom: 8px
+    &__checkbox
+      &-wrap
+        margin-bottom: 30px
+      &+label:before
+        width: 15px
+        height: 15px
+      &-label
+        padding-left: 25px
+        font-size: 10px
+        line-height: 12px
+    &__submit
+      padding: 10px 20px
+      font-size: 12px
   .header__wrap
     padding: 0 15px
   .container
@@ -448,6 +507,37 @@
           color: $alt-text-color
           background-color: $study-cards-button-color
   .services
+    padding: 
+      top: 60px
+      bottom: 80px
+    &__col
+      line-height: 18px
+      &:first-child
+        margin-right: 30px
+      &-title
+        margin-bottom: 10px
+        font-size: 18px
+      &-text
+        margin-bottom: 50px
+        font-size: 12px
+    &__video
+      margin-bottom: 160px
+      padding: 15px 15px 20px 80px
+      &::before
+        width: 70px
+        height: 65px
+      &-icon
+        width: 30px
+        height: 25px
+        left: 13px
+        top: 15px
+      &-title
+        margin-bottom: 8px
+        font-size: 16px
+        line-height: 18px
+      &-text
+        font-size: 10px
+        line-height: 12px
     &-cards
       padding: 
         top: 40px
@@ -641,6 +731,34 @@
           margin-bottom: 5px
         &-link
           padding: 2px 4px
+  .accordeon
+    &-slider
+      line-height: 14px
+      &:after
+        font-size: 12px
+        bottom: -20px
+      &__prev, &__next
+        padding: 10px
+        width: 10px
+        height: 10px
+        bottom: -30px
+      &__slide
+        margin: 0px 13px 13px
+    &__card
+      margin-bottom: 20px
+      &-icon
+        width: 10px
+        height: 10px
+        left: 11px
+      &-title
+        padding: 15px 20px 15px 30px
+        font-size: 12px
+        line-height: 16px
+      &-info
+        font-size: 12px
+        line-height: 16px
+        &_visible
+          padding: 10px 15px
   .contacts
     padding-top: 15px
     #map
@@ -743,6 +861,13 @@
 @media (max-width: 768px)
   .container
     min-width: 520px
+  .form
+    form
+      padding: 
+        left: 0
+        right: 30px
+    &__input
+      width: 160px
   .header
     &__contacts
       &-label
@@ -801,6 +926,25 @@
       &-subtitle
         max-width: 65%
   .services
+    padding: 
+      top: 40px
+      bottom: 60px
+    &__col
+      width: 47%
+      &-title
+        font-size: 16px
+      &-text
+        margin-bottom: 40px
+    &__video
+      padding: 50px 15px 20px 15px
+      z-index: 2
+      &::before
+        // left: unset
+        // right: 0
+        // clip-path: circle(80% at 74% 18%)
+        z-index: -1
+      &-icon
+        // left: 83%
     &-cards
       padding: 
         top: 40px
@@ -871,6 +1015,12 @@
           margin-bottom: 10px
         &-link
           padding: 4px
+  .accordeon
+    &-slider
+      &__prev
+        left: 20%
+      &__next
+        right: 20%
   .contacts
     &__block
       padding-right: 20px
@@ -890,6 +1040,10 @@
     &__separator
       &::after
         width: 80%
+  .form
+    max-width: 560px
+    &__input
+      width: 90%
   .header
     &__contacts
       &-button
@@ -942,6 +1096,20 @@
       width: 90%
       max-width: 250px
   .services
+    &__wrap
+      flex-direction: column
+      align-items: center
+    &__col
+      margin: 
+        left: auto
+        right: auto
+      width: 100%
+    &__video
+      margin-top: 80px
+      padding: 20px 20px 25px 80px
+      &-text
+        font-size: 12px
+        line-height: 14px
     &-cards
       &__slider
         &-prev
@@ -1010,6 +1178,16 @@
     &__contacts
       &-block
         margin-right: 80px
+  .accordeon
+    &-slider
+      &:after
+        bottom: -28px
+      &__prev
+        bottom: -40px
+        left: 31%
+      &__next
+        bottom: -40px
+        right: 31%
   .contacts
     padding-top: 20px
     &__title
@@ -1136,6 +1314,12 @@
         margin-bottom: 30px
         &:last-child
           margin-bottom: 0
+  .accordeon
+    &-slider
+      &__prev
+        left: 25%
+      &__next
+        right: 25%
   .footer
     padding: 40px 0
     &__wrap
