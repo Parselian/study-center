@@ -89,6 +89,18 @@
     &-slider
       &__prev, &__next
         bottom: -4.1vw
+  .service
+    &-intro
+      line-height: 1.9vw
+      &__col
+        &:first-child
+          width: 60%
+          margin-right: 6.5vw
+      &__title
+        font-size: 1.5vw
+      &__text
+        font-size: 1vw
+        line-height: 1.4vw
 
 @media (max-width: 1300px)
   .button
@@ -290,6 +302,14 @@
     &-slider
       &__prev, &__next
         bottom: -4.7vw
+  .service
+    &-intro
+      &__title
+        font-size: 1.7vw
+        line-height: 2.1vw
+      &__text
+        font-size: 1.1vw
+        line-height: 1.5vw
   .footer
     &__col
       line-height: 1.6vw
@@ -783,6 +803,37 @@
         width: 70px
       img, source
         margin-right: 40px
+  .service
+    &-intro
+      padding: 30px 0
+      line-height: 16px
+      &__col
+        &:first-child
+          margin-right: 50px
+      &__title
+        margin-bottom: 10px
+        font-size: 18px
+        line-height: 22px
+      &__text
+        font-size: 12px
+        line-height: 16px
+      &__download
+        padding: 16px 25px 20px 80px
+        &:before
+          width: 70px
+          height: 70px
+        &-icon
+          width: 35px
+          height: 35px
+          top: 10px
+          left: 10px
+        &-title
+          margin-bottom: 20px
+          font-size: 14px
+          line-height: 18px
+        &-link
+          font-size: 12px
+          line-height: 16px
   .contacts
     padding-top: 15px
     #map
@@ -1045,6 +1096,15 @@
         left: 20%
       &__next
         right: 20%
+  .service
+    &-intro
+      &__wrap
+        flex-direction: column
+      &__col
+        width: 56%
+        &:first-child
+          margin-bottom: 30px
+          width: 100%
   .contacts
     &__block
       padding-right: 20px
@@ -1212,6 +1272,13 @@
       &__next
         bottom: -40px
         right: 31%
+  .service
+    &-intro
+      &__col
+        width: 100%
+      &__download
+        padding-left: 75px
+        max-width: 200px
   .contacts
     padding-top: 20px
     &__title
