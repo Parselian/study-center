@@ -1,0 +1,16 @@
+mixin servicePrice(title, time, price)
+  tr.service-price__card
+    td.service-price__card-info= title
+    td.service-price__card-info= time + ' часов'
+    td.service-price__card-info= price + ' рублей'
+    td.service-price__card-info
+      button(type="submit").service-prices__item-button Подать заявку
+
+section.service-price
+  .service-price__wrap.container
+    h2.service__title Перечень программ обучения по охране труда 
+      svg.service__title-icon
+        use(xlink:href="./assets/images/svg/symbol/sprite.svg#message")
+    #service-price-slider.service-price-slider
+      table.service-price-slider__slide
+        +servicePrice('Охрана труда для специалистов и руководителей', '40', '3000')
